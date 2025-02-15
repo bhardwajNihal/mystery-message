@@ -2,7 +2,8 @@ import mongoose, {Schema,Document} from "mongoose";
 
 
 //defining message interface: 
-    export interface messageType extends Document{   //TypeScript would now recognize it as a valid Mongoose document.
+//TypeScript would now recognize it as a valid Mongoose document.
+    export interface messageType extends Document{      //provides some Document attributes like save()
         content : string;
         createdAt : Date
     }       
