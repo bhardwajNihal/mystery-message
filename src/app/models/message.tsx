@@ -28,9 +28,9 @@ import mongoose, {Schema,Document} from "mongoose";
 // Since Next.js is serverless, we must prevent redefining the model multiple times, which can cause errors. 
 // To handle this, we use mongoose.models to check if the model already exists before defining it.
 
-const Message = (mongoose.models.Message as mongoose.Model<messageType>) || mongoose.model<messageType>("Message",messageSchema);
+const MessageModel = (mongoose.models.MessageModel as mongoose.Model<messageType>) || mongoose.model<messageType>("MessageModel",messageSchema);
 
-export default Message;
+export default MessageModel;
 
 //In Next.js, server-side code runs on demand, so this prevents issues when models are re-registered on each request.
 // mongoose.models.Message checks if the model already exists.

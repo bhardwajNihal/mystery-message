@@ -1,5 +1,5 @@
 import { resend } from "./resend-instance";
-import VerificationEmail from "./verificationEmailTemplate";
+import VerificationEmailTemplate from "./verificationEmailTemplate";
 import { ApiResponseType } from "../types/apiResponse";
 
 interface verificationEmailProps{
@@ -19,11 +19,11 @@ export async function SendVerificationEmail(
             from: 'onboarding@resend.dev',
             to: email,
             subject: 'Mystry Message | Verification code',
-            react: VerificationEmail({username:username, otp:verifyCode})
+            react: VerificationEmailTemplate({username:username, otp:verifyCode})
           });
 
         return{
-            success:false,
+            success:true,
             message: "Verification Email sent Successfully!"
         }
 

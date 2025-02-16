@@ -8,7 +8,7 @@ interface VerificationEmailProps {
   otp: string
 }
 
-export const VerificationEmail = ({ username, otp }: VerificationEmailProps) => {
+export const VerificationEmailTemplate = ({ username, otp }: VerificationEmailProps) => {
   
   return (
     <Html>
@@ -47,4 +47,4 @@ export const VerificationEmail = ({ username, otp }: VerificationEmailProps) => 
   );
 };
 
-export default VerificationEmail;
+export default VerificationEmailTemplate;
